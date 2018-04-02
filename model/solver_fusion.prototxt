@@ -1,0 +1,19 @@
+train_net: "./train_fusion.prototxt"
+display: 10
+average_loss: 20
+# lr_policy: "fixed"
+# lr for unnormalized softmax
+base_lr: 1e-3
+lr_policy: "multistep"
+gamma: 0.1
+stepvalue: 10000
+stepvalue:20000
+power: 0.75
+# high momentum
+momentum: 0.9
+# no gradient accumulation
+iter_size: 5
+max_iter: 300000
+weight_decay: 0.0005
+snapshot: 10000
+snapshot_prefix: "./snapshot_fusion/fusion"

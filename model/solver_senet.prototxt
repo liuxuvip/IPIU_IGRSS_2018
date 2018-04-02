@@ -1,0 +1,20 @@
+train_net: ./train_senet.prototxt"
+display: 10
+average_loss: 20
+# lr_policy: "fixed"
+# lr for unnormalized softmax
+base_lr: 1e-2
+lr_policy: "multistep"
+stepvalue: 2000
+stepvalue:10000
+gamma: 0.1
+#stepsize: 15000
+power: 0.75
+# high momentum
+momentum: 0.9
+# no gradient accumulation
+iter_size: 5
+max_iter: 300000
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "./snapshot_senet/senet"
